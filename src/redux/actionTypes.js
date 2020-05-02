@@ -1,1 +1,4 @@
 export const SIDEBAR_TOGGLE = 'SIDEBAR_TOGGLE'
+export const MODAL_TOGGLE = 'MODAL_TOGGLE'
+export const SET_MODAL_BODY = 'SET_MODAL_BODY'
+export const SET_MODAL_TITLE = 'SET_MODAL_TITLE'

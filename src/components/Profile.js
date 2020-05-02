@@ -4,6 +4,7 @@ import { createClient } from 'contentful'
 import ExampleComponent from 'react-rounded-image';
 import { Layer } from 'grommet-icons';
 
+
 const client = createClient({
   space: "wp95wkcd3e2s",
   accessToken: "8h3cXJm30rnmEVv2Llvb7UugbYAbnvQ2OYqvjrgs2Tk"
