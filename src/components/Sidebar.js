@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Button, Text } from 'grommet'
+
 import '../App.css'
 
 export default function Sidebar() {
@@ -7,7 +8,7 @@ export default function Sidebar() {
     <Box
       //className="Side"
       //full="false"
-      //gridArea="sidebar"
+      gridArea="sidebar"
       background="white"
       width="small"
       animation={[
@@ -16,8 +17,9 @@ export default function Sidebar() {
       ]}
       elevation='medium'
       align='center'
+      flex={false}
     >
-      {["First", "Seconddddddddd", "Third"].map(name => (
+      {["Profile", "Second", "Third"].map(name => (
         <Button key={name} href="#" hoverIndicator>
           <Box pad={{ horizontal: "medium", vertical: "small" }} >
             <Text color='black'>{name}</Text>

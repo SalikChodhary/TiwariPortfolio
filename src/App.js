@@ -14,24 +14,24 @@ function App(props) {
 
   //const [sidebar, setSidebar] = useState(false);
   return (
-    // <Grid
-    //     fill
-    //     rows={["auto", "flex"]}
+    <Grid
+        fill
+        rows={["auto", "flex"]}
        
-    //     columns={["auto", "flex"]}
-    //     areas={[
-    //       { name: "header", start: [0, 0], end: [1, 0] },
-    //       { name: "sidebar", start: [0, 1], end: [0, 1] },
-    //       { name: "main", start: [1, 1], end: [1, 1] }
-    //     ]}
-    //   >
-    <Grid fill rows={["auto", "flex"]}>
+        columns={["auto", "flex"]}
+        areas={[
+          { name: "header", start: [0, 0], end: [1, 0] },
+          { name: "sidebar", start: [0, 1], end: [0, 1] },
+          { name: "main", start: [1, 1], end: [1, 1] }
+        ]}
+      >
+    {/* // <Grid fill rows={["auto", "flex"]}> */}
         
         <Header /> 
-        <Box direction="row" justify="start" >
+        {/* <Box direction="row" justify="start" flex="false"> */}
           {props.sidebar && <Sidebar />}
           <Main />
-        </Box>
+        {/* </Box> */}
         
       </Grid>
   );

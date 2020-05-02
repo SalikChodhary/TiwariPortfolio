@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 function Header(props) {
   return (
     <Box
-      //gridArea="header"
+      gridArea="header"
       direction="row"
       align="center"
       justify="between"
@@ -18,7 +18,6 @@ function Header(props) {
       <Button onClick={() => props.toggle(props.sidebar)}>
         <Menu size='large' color='black' />
       </Button>
-      <Text size='xlarge' color='black'>Personal Website</Text>
       <Box gap='small' direction="row">
         <Linkedin />  
         <Mail />

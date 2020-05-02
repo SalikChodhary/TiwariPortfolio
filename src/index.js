@@ -4,14 +4,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Grommet, grommet } from 'grommet';
+import './App.css'
 
 import { store } from './redux/configStore'
 import { Provider } from 'react-redux'
 
+const theme = {
+  global: {
+    font: {
+      family: "Poppins",
+      size: "14px"
+    }
+  }
+};
+
 ReactDOM.render(
   
     <Provider store={store}>
-      <Grommet full theme={grommet}>
+      <Grommet full theme={theme}>
         <App />
       </Grommet>
     </Provider>,

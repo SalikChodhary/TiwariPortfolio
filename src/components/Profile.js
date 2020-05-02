@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import {Box, Avatar, } from 'grommet'
+import {Box, Avatar, Heading, Paragraph, Text } from 'grommet'
 import { createClient } from 'contentful'
+import ExampleComponent from 'react-rounded-image';
 import { Layer } from 'grommet-icons';
 
 const client = createClient({
@@ -20,18 +21,17 @@ export default function Profile() {
             //console.log(articles)
           });
   }, []);
-  // if (articles === null) { 
-  //   client.getEntries().then(({ items }) => {
-  //     setArticles({ articles: items });
-  //     console.log(articles)
-  //   });
-  // }
   
 
   return (
-    <Box direction="column" align="center">
-      <img src={profilePic} />
-      <p>{profile}</p>
+    <Box background="light-1" width="full" direction="column" align="center" flex="false">
+      <Heading>
+        First Last
+      </Heading>
+      <Box flex="false">
+        <ExampleComponent image={profilePic} flex="true"/>
+      </Box>
+      <Paragraph color="black" flex="true">{profile}</Paragraph>
     </Box>
   )
 }

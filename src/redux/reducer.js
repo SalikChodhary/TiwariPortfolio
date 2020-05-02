@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 
 
 const initialState = {
-  sidebar: true
+  sidebar: false
 }
 
 const reducer = (state = initialState, action) => {
