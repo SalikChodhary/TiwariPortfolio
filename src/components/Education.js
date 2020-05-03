@@ -31,7 +31,6 @@ function Education(props) {
       <Heading>Education</Heading>
       <Box background="white" width="full" direction="row" align="center" justify="center" flex="false">
         {schools.map((school, i) => <Card key={i} title={school.schoolName} image={school.relevantPicture.fields.file.url} body={school.relevantInformation}/>)}
-        {console.log(schools)}
       </Box>
       {props.modal && <InfoLayer />}
     </Box>
