@@ -1,16 +1,32 @@
 import React from 'react'
-import {Layer, Text, Box, Paragraph, Heading} from 'grommet'
+import {Layer, Text, Box, Paragraph, Heading, Button} from 'grommet'
 import { toggleModal } from '../redux/actions'
 import { connect } from 'react-redux'
 
 function InfoLayer(props) {
-  const test = "Salik\nSalik"
   return (
     // <div>OUHFSOUHFOUFHIUH</div>
     <Layer position="center" modal onClickOutside={() => props.toggle(props.modal)} onEsc={() => props.toggle(props.modal)}>
-      <Box height="medium" width="medium" direction="column" pad="medium" overflow="auto">
-        <Heading size="xxsmall">{props.modalTitle}</Heading>
-        <Paragraph style={{whiteSpace: "pre-wrap"}}>{String(props.modalBody)}</Paragraph>
+      <Box height="medium" width="medium" direction="column" gap="small" pad="small" justify="between">
+        <Box justify="start">
+          <Heading size="xxsmall" textAlign="center">{props.modalTitle}</Heading>
+          <Box overflow="auto" >
+            <Paragraph style={{whiteSpace: "pre-wrap"}}>{String(props.modalBody)}</Paragraph>
+          </Box>
+        </Box>
+        
+        
+        <Button
+          label={
+            <Text color="white">
+              <strong>Continue</strong>
+            </Text>
+          }
+          onClick={() => props.toggle(props.modal)}
+          primary
+          color="black"
+          style={{position: "static"}}
+        />
       </Box>
     </Layer>
   )

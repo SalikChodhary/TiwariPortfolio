@@ -12,15 +12,20 @@ const client = createClient({
   accessToken: "8h3cXJm30rnmEVv2Llvb7UugbYAbnvQ2OYqvjrgs2Tk"
 })
 
-function Education(props) {
-  const [schools, setSchools] = useState([]);
+function Experience(props) {
+  const [experiences, setExperiences] = useState([]);
   
   useEffect(() => {
     client.getEntries({
-      'content_type': 'education'
+      'content_type': 'experience'
     }).then((response) => {
-            let newSchools = response.items.map(item => item.fields)
-            setSchools(newSchools);
+            let newExperiences = response.items.map(item => {
+              let image = item.fields.relevantPicture === undefined ? '../logo.svg' : item.fields.relevantPicture
+              return {title: item.fields.experienceTitle, 
+                      body: item.fields.relevantInformation, 
+                      image: image}
+            })
+            setExperiences(newExperiences);
           });
   }, []);
 
@@ -29,7 +34,8 @@ function Education(props) {
     <Box background="white" width="full" direction="column" align="center" flex="false">
       <Heading>Education</Heading>
       <Box background="white" width="full" direction="row" align="center" justify="center" flex="false">
-        {schools.map((school, i) => <Card key={i} title={school.schoolName} image={school.relevantPicture.fields.file.url} body={school.relevantInformation}/>)}
+        {console.log(experiences)}
+        {experiences.map((experience, i) => (<Card key={i} title={experience.title} image={experience.image} body={experience.body}/>))}
       </Box>
       {props.modal && <InfoLayer />}
     </Box>
@@ -43,4 +49,4 @@ function mapStateToProps(state) {
   }
 } 
 
-export default connect(mapStateToProps)(Education)
+export default connect(mapStateToProps)(Experience)

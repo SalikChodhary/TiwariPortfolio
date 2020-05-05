@@ -16,7 +16,7 @@ function Header(props) {
       elevation='medium'
     >
       <Button onClick={() => props.toggle(props.sidebar)}>
-        <Menu size='large' color='black' />
+        <Menu size='large' />
       </Button>
       <Box gap='small' direction="row">
         <Linkedin />  
