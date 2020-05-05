@@ -25,14 +25,16 @@ export default function Profile() {
   
 
   return (
-    <Box background="light-1" width="full" direction="column" align="center" flex="false">
-      <Heading>
-        First Last
-      </Heading>
-      <Box flex="false">
-        <ExampleComponent image={profilePic} flex="true"/>
+    <div id="profile" style={{width: "100%"}}>
+      <Box background="light-1" width="full" direction="column" align="center" flex="false">
+        <Heading>
+          First Last
+        </Heading>
+        <Box flex="false">
+          <ExampleComponent image={profilePic} flex="true"/>
+        </Box>
+        <Paragraph color="black" flex="true">{profile}</Paragraph>
       </Box>
-      <Paragraph color="black" flex="true">{profile}</Paragraph>
-    </Box>
+    </div>
   )
 }

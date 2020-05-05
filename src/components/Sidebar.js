@@ -1,9 +1,14 @@
 import React from 'react'
 import { Box, Button, Text } from 'grommet'
+import { HashLink as Link} from 'react-router-hash-link'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import '../App.css'
 
 export default function Sidebar() {
+  const capitalize = (str) => { 
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
   return (
     <Box
       //className="Side"
@@ -18,14 +23,19 @@ export default function Sidebar() {
       elevation='medium'
       align='center'
       flex={false}
+      justify="center"
     >
-      {["Profile", "Second", "Third"].map(name => (
-        <Button key={name} href="#" hoverIndicator>
-          <Box pad={{ horizontal: "medium", vertical: "small" }} >
-            <Text color='black'>{name}</Text>
-          </Box>
-        </Button>
-      ))}
+      <Router>
+        {["profile", "education", "experience", "achievements"].map(name => (
+          <Link to={"/#" + name}>
+            <Button key={name} hoverIndicator>
+              <Box pad={{ horizontal: "medium", vertical: "small" }} >
+                <Text color='black' size="large">{capitalize(name)}</Text>
+              </Box>
+            </Button>
+          </Link>
+        ))}
+      </Router>
     </Box>
   )
 }

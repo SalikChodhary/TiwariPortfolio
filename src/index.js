@@ -22,7 +22,7 @@ ReactDOM.render(
   
     <Provider store={store}>
       <Grommet full theme={theme}>
-        <App />
+          <App />
       </Grommet>
     </Provider>,
   document.getElementById('root')

@@ -13,7 +13,7 @@ export default function Main() {
       <Profile /> 
       {/* <Education />
       <Experience /> */}
-      {["education", "experience"].map((query, i) => <DataLayout contentQuery={query} key={i} />)}
+      {["education", "experience", "achievements"].map((query, i) => <div id={query} style={{width: "100%"}}><DataLayout contentQuery={query} key={i} /></div>)}
       {/* <DataLayout contentQuery="education" />
       <DataLayout contentQuery="experience" /> */}
       {/* <Box background="dark-2" flex={false}>
