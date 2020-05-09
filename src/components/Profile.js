@@ -3,7 +3,7 @@ import {Box, Avatar, Heading, Paragraph, Text } from 'grommet'
 import { createClient } from 'contentful'
 import ExampleComponent from 'react-rounded-image';
 import { Layer } from 'grommet-icons';
-import back from '../test2.jpeg'
+
 
 
 const client = createClient({
@@ -29,9 +29,10 @@ export default function Profile() {
     <div id="profile" style={{width: "100%"}}>
       {/* //style={{backgroundImage: `url(${back})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} */}
       <Box background="light-2" width="full" direction="column" align="center" flex="false">
-        <Heading>
-          First Last
-        </Heading>
+          <Heading style={{display: "inline-block"}}>
+            First Last
+          </Heading>
+        
         <Box flex="false">
           <ExampleComponent image={profilePic} flex="true"/>
         </Box>

@@ -34,9 +34,9 @@ function Experience(props) {
 
 
   return (
-    <Box background="white" width="full" direction="column" align="center" flex="false">
+    <Box background="light-2" width="full" direction="column" align="center" flex="false">
       <Heading>{capitalize(props.contentQuery)}</Heading>
-      <Box background="white" width="full" direction="row" align="start" justify="center" flex="true" wrap="true">
+      <Box background="light-2" width="full" direction="row" align="start" justify="center" flex="true" wrap="true">
         
         {data.map((item, i) => (<Card key={i} title={item.title} image={item.image} body={item.body}/>))}
       </Box>

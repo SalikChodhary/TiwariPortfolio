@@ -24,7 +24,7 @@ function InfoLayer(props) {
           }
           onClick={() => props.toggle(props.modal)}
           primary
-          color="black"
+          color="#6699ff"
           style={{position: "static"}}
         />
       </Box>

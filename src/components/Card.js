@@ -16,7 +16,7 @@ function Card(props) {
     e.target.src = logo;
   }
   return (
-    <Box direction="column" elevation="medium" flex="false" width="medium" height ="medium" margin="small" justify="start" hoverIndicator onClick={handleClick}>
+    <Box background="white" direction="column" elevation="medium" flex="false" width="medium" height ="medium" margin="small" justify="start" hoverIndicator onClick={handleClick} >
       
       <div style={{maxWidth: "90%", minWidth:"90%",  maxHeight: "80%", minHeight: "80%", margin: "5%"}}>
         <img onError={loadFallback} src={props.image} style={{objectFit: "fill", maxWidth: "100%", minWidth:"100%",  maxHeight: "100%", minHeight: "100%", backgroundColor: "white"}} />   
