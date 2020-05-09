@@ -8,6 +8,7 @@ import Education from './Education'
 import Experience from './Experience'
 import Header from './Header'
 import DataLayout from './DataLayout'
+import Footer from './Footer'
 
 export default function Main() {
   return (
@@ -15,7 +16,7 @@ export default function Main() {
       <Profile /> 
       {/* <Education />
       <Experience /> */}
-      {["education", "experience", "achievements"].map((query, i) => <div id={query} style={{width: "100%"}}><DataLayout contentQuery={query} key={i} /></div>)}
+      {["education", "experience", "achievements"].map((query, i) => <div id={query} style={{width: "100%"}} key={i}><DataLayout contentQuery={query} key={i} /></div>)}
       {/* <DataLayout contentQuery="education" />
       <DataLayout contentQuery="experience" /> */}
       {/* <Box background="dark-2" flex={false}>
@@ -25,6 +26,7 @@ export default function Main() {
         <Avatar size='xxlarge' src={logo}/>
         <Text>FUDOAUFAHOFUHFOUHFOUHFOUSHAOUFHOUFHOUFH</Text>
       </Box> */}
+      <Footer />
     </Box>
   )
 }

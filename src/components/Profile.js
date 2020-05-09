@@ -28,12 +28,12 @@ export default function Profile() {
   return (
     <div id="profile" style={{width: "100%"}}>
       {/* //style={{backgroundImage: `url(${back})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} */}
-      <Box background="light-2" width="full" direction="column" align="center" flex="false">
+      <Box background="light-2" width="full" direction="column" align="center" flex={false} pad={{horizontal: "medium"}} overflow="auto">
           <Heading style={{display: "inline-block"}}>
             First Last
           </Heading>
         
-        <Box flex="false">
+        <Box >
           <ExampleComponent image={profilePic} flex="true"/>
         </Box>
         <Paragraph color="black" flex="true">{profile}</Paragraph>

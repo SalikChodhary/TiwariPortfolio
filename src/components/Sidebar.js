@@ -37,7 +37,7 @@ export default function Sidebar() {
         { type: "slideRight", size: "xlarge", duration: 150 }
       ]}
       elevation="medium"
-      align='left'
+      align='start'
       width="auto"
       justify="center"
       overflow="auto"
@@ -45,11 +45,11 @@ export default function Sidebar() {
       <Router>
         {["profile", "education", "experience", "achievements"].map(name => (
           
-          <Link to={"/#" + name}>
+          <Link to={"/#" + name} key={name}>
             <Button key={name} hoverIndicator fill="horizontal" margin="small">
               <Box pad={{vertical: "small" }} direction="row" gap="small">
                 {addIcon(name)}
-                <Text color='black' size="large">{capitalize(name)}</Text>
+                <Text color="black" size="large">{capitalize(name)}</Text>
               </Box>
             </Button>
           </Link>
