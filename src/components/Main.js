@@ -1,15 +1,17 @@
 import React from 'react'
-import {Box, Avatar, Text} from 'grommet'
+import {Box, Avatar, Text, Button} from 'grommet'
+import {Menu, Mail, Linkedin} from 'grommet-icons'
 
 import logo from '../logo.svg'
 import Profile from './Profile'
 import Education from './Education'
 import Experience from './Experience'
+import Header from './Header'
 import DataLayout from './DataLayout'
 
 export default function Main() {
   return (
-    <Box gridArea="main" align="center" justify="between" overflow="auto">
+    <Box gridArea="main" align="center" justify="between" overflow="auto" >
       <Profile /> 
       {/* <Education />
       <Experience /> */}

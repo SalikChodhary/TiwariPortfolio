@@ -7,20 +7,20 @@ import { connect } from 'react-redux'
 function Header(props) {
   return (
     <Box
+      elevation='medium'
       gridArea="header"
       direction="row"
       align="center"
       justify="between"
       pad={{ horizontal: "medium", vertical: "small" }}
       background="white"
-      elevation='medium'
     >
       <Button onClick={() => props.toggle(props.sidebar)}>
         <Menu size='large' />
       </Button>
-      <Box gap='small' direction="row">
-        <Linkedin />  
-        <Mail />
+      <Box gap='small' direction="row" >
+        <a href="https://www.linkedin.com/in/salik-chodhary-495751142/"><Linkedin /></a>
+        <a href="mailto:ishika.tiwari86@gmail.com"><Mail /></a>
       </Box> 
     </Box>
   )

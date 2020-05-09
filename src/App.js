@@ -29,8 +29,8 @@ function App(props) {
         
         <Header /> 
         {/* <Box direction="row" justify="start" flex="false"> */}
-          {props.sidebar && <Sidebar />}
-          <Main />
+        {props.sidebar && <Sidebar />}
+        <Main />
         {/* </Box> */}
         
       </Grid>
