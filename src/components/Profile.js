@@ -3,6 +3,7 @@ import {Box, Avatar, Heading, Paragraph, Text } from 'grommet'
 import { createClient } from 'contentful'
 import ExampleComponent from 'react-rounded-image';
 import { Layer } from 'grommet-icons';
+import '../App.css'
 
 
 
@@ -30,13 +31,12 @@ export default function Profile() {
       {/* //style={{backgroundImage: `url(${back})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} */}
       <Box background="light-2" width="full" direction="column" align="center" flex={false} pad={{horizontal: "medium"}} overflow="auto">
           <Heading style={{display: "inline-block"}}>
-            First Last
+            Ishika Tiwari
           </Heading>
-        
-        <Box >
-          <ExampleComponent image={profilePic} flex="true"/>
-        </Box>
-        <Paragraph color="black" flex="true">{profile}</Paragraph>
+        <div class="image-cropper">
+          <img src={profilePic} alt="avatar" class="profile-pic" />
+        </div>
+        <Paragraph color="black" flex="true" style={{whiteSpace: "pre-wrap"}}>{String(profile)}</Paragraph>
       </Box>
     </div>
   )

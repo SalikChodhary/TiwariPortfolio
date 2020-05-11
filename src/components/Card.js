@@ -23,8 +23,8 @@ function Card(props) {
       </div>
       
       {/* <Image src={props.school.relevantPicture.fields.file.url} fit="contain" fill="horizontal" /> */}
-      <Box basis="1/4">
-        <Text weight="bold" textAlign="center">{props.title}</Text>
+      <Box basis="1/4" pad={{horizontal: "small"}}>
+        <Text weight="bold" textAlign="center" truncate={true}>{props.title}</Text>
       </Box>
     </Box>
   )

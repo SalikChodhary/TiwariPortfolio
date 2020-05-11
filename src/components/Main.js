@@ -12,20 +12,12 @@ import Footer from './Footer'
 
 export default function Main() {
   return (
-    <Box gridArea="main" align="center" justify="between" overflow="auto" >
+    <Box gridArea="main" align="center" justify="between" overflow="auto" background="light-2">
       <Profile /> 
       {/* <Education />
       <Experience /> */}
       {["education", "experience", "achievements"].map((query, i) => <div id={query} style={{width: "100%"}} key={i}><DataLayout contentQuery={query} key={i} /></div>)}
-      {/* <DataLayout contentQuery="education" />
-      <DataLayout contentQuery="experience" /> */}
-      {/* <Box background="dark-2" flex={false}>
-        <Avatar size='xxlarge' src={logo}/>
-      </Box>
-      <Box flex={false}>
-        <Avatar size='xxlarge' src={logo}/>
-        <Text>FUDOAUFAHOFUHFOUHFOUHFOUSHAOUFHOUFHOUFH</Text>
-      </Box> */}
+      <br />
       <Footer />
     </Box>
   )
