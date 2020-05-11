@@ -21,7 +21,7 @@ function Header(props) {
         <Menu size='large' color="white"/>
       </Button>
       <Box gap='small' direction="row" >
-        <a href="https://www.linkedin.com/in/salik-chodhary-495751142/"><Linkedin color="white"/></a>
+        <a href="https://www.linkedin.com/in/ishika-tiwari/"><Linkedin color="white"/></a>
         <a href="mailto:ishika.tiwari86@gmail.com"><Mail color="white"/></a>
       </Box> 
     </Box>

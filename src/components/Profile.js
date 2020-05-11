@@ -33,6 +33,7 @@ export default function Profile() {
           <Heading style={{display: "inline-block"}}>
             Ishika Tiwari
           </Heading>
+        
         <div class="image-cropper">
           <img src={profilePic} alt="avatar" class="profile-pic" />
         </div>
